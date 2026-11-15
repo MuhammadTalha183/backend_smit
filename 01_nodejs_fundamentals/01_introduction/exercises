@@ -1,0 +1,63 @@
+Exercises — 01 Introduction to Node.js
+Do these after reading the topic README and running node examples/introduction.js.
+No solutions are provided on purpose — the exercise is the learning.
+If you are stuck, re-read the matching section of the README and run the example again.
+
+Exercise 1 — Install and Verify ⭐ Start here
+Install the LTS version of Node.js from https://nodejs.org/ (if you have not already).
+Run these two commands in your terminal:
+   node --version
+   npm --version
+Write down your two version numbers.
+Done when: both commands print a version, with no error.
+Hint: if node is not found, close and reopen the terminal and try again.
+
+Exercise 2 — Hello, Your Name
+Write a program hello.js that prints:
+Your name
+Your university (SMIU)
+Your semester
+Run it:
+node hello.js
+Question to answer in a comment at the top of your file:
+Where did this JavaScript run — in a browser, or in Node.js? How do you know?
+
+Exercise 3 — REPL Practice
+Start the REPL by typing node with no file name, then try these:
+2 + 3
+const name = 'Talha';
+`Hello, ${name}!`
+Write down what you typed and what Node.js returned for each line.
+Type .exit to leave the REPL.
+Question to answer:
+When would you use the REPL instead of creating a file? Give one example.
+Hint: quick tests — see Section 12 of the README.
+
+Exercise 4 — Browser vs Node.js
+Write a program browser-vs-node.js that prints:
+typeof window
+typeof document
+typeof process
+Run it with node, then explain each result in a comment:
+Why is window undefined here, but an object in a browser?
+Why is process an object here, but undefined in a browser?
+Done when: you can explain all three lines in your own words.
+
+Exercise 5 — Your First Server
+Copy the 6-line server from Section 11 of the README into a file called server.js.
+Run it:
+   node server.js
+Open http://localhost:3000 in your browser. You should see your message.
+Change the message in server.js and refresh the browser.
+Questions to answer:
+Did the message change in the browser without restarting the server? Why / why not?
+How do you stop the server? (Try Ctrl + C in the terminal.)
+Hint: Node.js reads your file once, when it starts. Changing the file does not change the running program.
+
+Checklist
+Exercise 1 — Node.js and npm versions checked
+Exercise 2 — hello.js runs, with your name
+Exercise 3 — REPL tried, answers written down
+Exercise 4 — browser vs Node.js explained
+Exercise 5 — first server runs at http://localhost:3000
+Next topic: 02 — Node.js Architecture
