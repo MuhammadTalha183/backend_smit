@@ -100,12 +100,12 @@ app.use(express.json())
 
 let users = [
     {
-        username : "hasanCoder66",
-        email : "codermhasan@gmail.com"
+        username : "talha183",
+        email : "talha@gmail.com"
     },
     {
-        username : "sufiyan",
-        email : "sufiyan@gmail.com"
+        username : "khaizer",
+        email : "khazir@gmail.com"
     },
 ]
 
