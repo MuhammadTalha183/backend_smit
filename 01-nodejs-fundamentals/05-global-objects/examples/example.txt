@@ -1,0 +1,60 @@
+Node.js version: v24.22.1
+
+--- PART 1: globalThis, global, window ---
+globalThis === global: true
+typeof window: undefined
+typeof globalThis.setTimeout: function
+typeof globalThis.process: object
+typeof globalThis.Buffer: function
+typeof globalThis.console: object
+
+--- PART 2: __dirname, __filename, process ---
+__dirname: /home/hatch/workspace/backend-development-journey/01-nodejs-fundamentals/05-global-objects/examples
+__filename: /home/hatch/workspace/backend-development-journey/01-nodejs-fundamentals/05-global-objects/examples/global-objects.js
+process.cwd(): /home/hatch/workspace/backend-development-journey/01-nodejs-fundamentals/05-global-objects
+process.version: v24.22.1
+process.platform: linux
+process.argv[0] (node binary): /usr/bin/node
+process.argv[1] (this file): /home/hatch/workspace/backend-development-journey/01-nodejs-fundamentals/05-global-objects/examples/global-objects.js
+process.env.NODE_ENV: undefined
+typeof process.env.NODE_ENV: undefined
+
+--- PART 3: console methods ---
+┌─────────┬───────────┬───────────┐
+│ (index) │ name      │ topic     │
+├─────────┼───────────┼───────────┤
+│ 0       │ 'Talha'   │ 'Node.js' │
+│ 1       │ 'D CODES' │ 'Backend' │
+└─────────┴───────────┴───────────┘
+console.table above printed a table, not just text.
+
+--- PART 4: Buffer and UTF-8 bytes ---
+word: سلام
+word.length (characters): 4
+buf.length (bytes): 8
+buf.toString("utf8"): سلام
+Buffer.from("hello").toString("hex"): 68656c6c6f
+
+--- PART 5: timers are globals ---
+global.setTimeout === setTimeout: true
+global.setImmediate === setImmediate: true
+global.console === console: true
+global.Buffer === Buffer: true
+
+--- PART 6: a top-level var is NOT global ---
+myModuleVar: I live in this file only
+globalThis.myModuleVar: undefined
+globalThis.myExplicitGlobal: I live everywhere
+
+--- PART 7: URL and text encoding ---
+url.hostname: example.com
+url.pathname: /users
+url.searchParams.get("page"): 2
+TextEncoder "hello": 104, 101, 108, 108, 111
+TextDecoder back to text: hello
+
+--- PART 8: queueMicrotask order ---
+  0. synchronous code (runs first, always)
+  1. queueMicrotask
+  2. Promise.then
+  3. setTimeout(0)

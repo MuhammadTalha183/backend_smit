@@ -1,0 +1,39 @@
+Node.js version: v24.22.1
+V8 version:      13.6.233.17-node.58
+
+--- PART 1: Heap statistics (v8 module) ---
+Used heap size:  8 MB
+Total heap size: 12 MB
+Heap size limit: 2240 MB
+This is V8's memory: the heap where your objects live.
+Raise the limit with: node --max-old-space-size=4096 app.js
+
+--- PART 2: JIT warm-up ---
+Running the SAME 1,000,000-add loop three times...
+  result: 1000000000000
+1st run (1M adds): 5.539ms
+  result: 1000000000000
+2nd run (1M adds): 1.496ms
+  result: 1000000000000
+3rd run (1M adds): 1.485ms
+Why faster? First run: Ignition interprets the bytecode.
+Later runs: TurboFan compiled add() to optimized machine
+code, because it saw the same number types every time.
+
+--- PART 3: Hidden Classes / Inline Caching ---
+Same shape (2M reads): 4.036ms
+Changing shape (2M reads): 16.056ms
+Total (to stop V8 optimising the loop away): 6000000
+Same shape = one hidden class, one fast inline cache.
+Changing shape = V8 must look up x and y every time.
+Rule: always add properties in the same order.
+
+--- PART 4: Garbage Collection ---
+Heap before creating objects: 8 MB
+Heap after creating 200,000 objects: 29 MB
+Heap after dropping them + running GC: 7 MB
+GC freed the memory. No free() call needed in JS.
+
+Lesson: V8 runs JavaScript. V8 also cleans up after it.
+Keep object shapes stable and types consistent, and
+V8 can keep your code on the fast path.

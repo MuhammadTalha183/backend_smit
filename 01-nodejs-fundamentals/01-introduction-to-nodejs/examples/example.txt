@@ -1,0 +1,27 @@
+--- PART 1: Hello, Node.js ---
+Hello, Node.js!
+JavaScript is running outside the browser.
+
+--- PART 2: Versions ---
+Node version: v24.22.1
+V8 version:   13.6.233.17-node.58
+Platform:     linux
+process is a global object - no require() needed.
+
+--- PART 3: Browser vs Node.js ---
+typeof window:   undefined
+typeof document: undefined
+typeof process:  object
+window and document are undefined here -
+there is no web page on a server.
+
+--- PART 4: First module (os) ---
+CPU cores:   4
+Free memory: 653 MB
+Total memory: 7934 MB
+
+require() loads a built-in module.
+Node.js can talk to the operating system.
+
+Next: 02 - Node.js Architecture
+V8 runs the code. libuv handles the waiting.

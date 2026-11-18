@@ -1,0 +1,34 @@
+Node.js version: v24.22.1
+
+--- PART 1: nextTick vs Promise vs timer vs immediate ---
+  0. synchronous code (runs first, always)
+
+--- PART 2: inside an I/O callback ---
+Reading this file with fs.readFile...
+  1. process.nextTick
+  2. Promise.then
+  4. setTimeout(0)
+  5. setImmediate
+  readFile callback (poll phase)
+  (both were scheduled inside the callback)
+  setImmediate - runs FIRST
+  setTimeout(0) - runs second
+
+--- PART 3: blocking the Event Loop ---
+Timer scheduled for 100ms. Now blocking the main
+thread with a busy loop for about 300ms...
+Busy loop done. (x = 3404450)
+Timer fired after 300ms, not 100ms.
+The loop was blocked, so the timer could not fire
+on time - it waited for the busy loop to finish.
+
+--- PART 4: async I/O does not block the loop ---
+Starting a slow async file read, then a 50ms timer.
+File read done (4248 chars).
+Timer fired after 50ms - on time,
+even though the file read was still running.
+The read happened in the Thread Pool, not on
+the main thread, so the loop stayed free.
+
+Lesson: the Event Loop is a traffic controller,
+not a worker. Keep it free, and Node.js stays fast.
