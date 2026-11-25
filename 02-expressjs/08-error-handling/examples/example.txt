@@ -1,0 +1,9 @@
+GET /ok            -> 200 {"message":"All good"}
+[error] 500 GET /sync-error — Something broke while handling this request
+GET /sync-error   -> 500 {"error":"Something broke while handling this request"}
+[error] 503 GET /async-error — The database is unavailable
+GET /async-error  -> 503 {"error":"The database is unavailable"}
+[error] 404 GET /users/999 — User not found
+GET /users/999    -> 404 {"error":"User not found"}
+[error] 404 GET /no-such-page — Route GET /no-such-page not found
+GET /no-such-page -> 404 {"error":"Route GET /no-such-page not found"}

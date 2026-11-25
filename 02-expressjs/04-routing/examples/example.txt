@@ -1,0 +1,12 @@
+Server listening on port 39581
+GET / -> 200 {"message":"Welcome to the Routing demo"}
+GET /users/42 -> 200 {"userId":"42"}
+GET /search?q=express&page=2 -> 200 {"q":"express","page":"2"}
+POST /users -> 201 {"created":true,"name":"Talha"}
+GET /items -> 200 [{"id":1,"name":"Pen"},{"id":2,"name":"Notebook"}]
+POST /items -> 201 {"id":3,"name":"Pencil"}
+GET /items (after POST) -> 200 [{"id":1,"name":"Pen"},{"id":2,"name":"Notebook"},{"id":3,"name":"Pencil"}]
+GET /api/status -> 200 {"status":"ok"}
+GET /api/users/7/posts -> 200 {"userId":"7","posts":[]}
+GET /no-such-route -> 404 {"error":"Not found","path":"/no-such-route"}
+Server closed.

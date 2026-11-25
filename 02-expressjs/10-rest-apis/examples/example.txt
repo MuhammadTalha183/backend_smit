@@ -1,0 +1,10 @@
+GET    /api/v1/posts -> 200 {"success":true,"data":[{"id":1,"userId":1,"title":"Hello Node","body":"My first post","createdAt":"2026-11-01"},{"id":2,"userId":1,"title":"Express routing","body":"Routes are just functions","createdAt":"2026-11-03"},{"id":3,"userId":2,"title":"Why REST?","body":"One contract, many clients","createdAt":"2026-11-05"},{"id":4,"userId":2,"title":"Status codes","body":"201 means created, not 200","createdAt":"2026-11-08"},{"id":5,"userId":3,"title":"Pagination","body":"Never return the whole table","createdAt":"2026-11-10"}],"meta":{"total":5,"page":1,"limit":10,"pages":1}}
+GET    /api/v1/posts?userId=2&limit=1 -> 200 {"success":true,"data":[{"id":3,"userId":2,"title":"Why REST?","body":"One contract, many clients","createdAt":"2026-11-05"}],"meta":{"total":2,"page":1,"limit":1,"pages":2}}
+GET    /api/v1/posts/3 -> 200 {"success":true,"data":{"id":3,"userId":2,"title":"Why REST?","body":"One contract, many clients","createdAt":"2026-11-05"}}
+GET    /api/v1/posts/99 (missing) -> 404 {"success":false,"error":{"message":"Post 99 not found"}}
+POST   /api/v1/posts -> 201 {"success":true,"data":{"id":6,"userId":1,"title":"New post","body":"Created by the demo","createdAt":"2026-11-25"}}
+POST   /api/v1/posts (bad body) -> 400 {"success":false,"error":{"message":"title is required and must be a non-empty string"}}
+PATCH  /api/v1/posts/2 -> 200 {"success":true,"data":{"id":2,"userId":1,"title":"Express routing (edited)","body":"Routes are just functions","createdAt":"2026-11-03"}}
+DELETE /api/v1/posts/5 -> 204 
+GET    /api/v1/posts/5 (deleted) -> 404 {"success":false,"error":{"message":"Post 5 not found"}}
+GET    /nope (unknown route) -> 404 {"success":false,"error":{"message":"Route GET /nope does not exist"}}

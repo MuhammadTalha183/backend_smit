@@ -1,0 +1,6 @@
+GET    /users        -> 200 [{"id":1,"name":"Talha","email":"talha@example.com"},{"id":2,"name":"Sara","email":"sara@example.com"}]
+POST   /users (new)  -> 201 {"id":3,"name":"Ayesha","email":"ayesha@example.com"}
+GET    /users/1      -> 200 {"id":1,"name":"Talha","email":"talha@example.com"}
+GET    /users/999    -> 404 {"error":"User not found"}
+DELETE /users/1      -> 200 {"message":"User deleted"}
+GET    /users (after)-> 200 [{"id":2,"name":"Sara","email":"sara@example.com"},{"id":3,"name":"Ayesha","email":"ayesha@example.com"}]

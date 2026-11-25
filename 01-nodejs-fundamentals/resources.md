@@ -12,6 +12,8 @@ Use these references when a note is unclear, or when you want to go deeper. The 
 | Node.js Documentation | Guides, getting started, and concepts | [https://nodejs.org/en/docs](https://nodejs.org/en/docs) |
 | Node.js API Reference | Every built-in module: `fs`, `http`, `path`, `events`, `process`, `Buffer`, timers | [https://nodejs.org/api/](https://nodejs.org/api/) |
 | Node.js Globals | `__dirname`, `__filename`, `global`, `process`, `console`, `Buffer`, timers | [https://nodejs.org/api/globals.html](https://nodejs.org/api/globals.html) |
+| Node.js Modules: CommonJS | `require()`, `module.exports`, caching, the module wrapper | [https://nodejs.org/api/modules.html](https://nodejs.org/api/modules.html) |
+| Node.js Modules: ES Modules | `import` / `export`, and how they differ from CommonJS (topic 07) | [https://nodejs.org/api/esm.html](https://nodejs.org/api/esm.html) |
 | Node.js Process | `process.version`, `process.env`, `process.argv`, `process.nextTick` | [https://nodejs.org/api/process.html](https://nodejs.org/api/process.html) |
 | Node.js File System | `fs.readFile`, `fs.readFileSync`, and the rest of the `fs` module | [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html) |
 | Node.js Events | `EventEmitter` — `on`, `emit`, `once` | [https://nodejs.org/api/events.html](https://nodejs.org/api/events.html) |

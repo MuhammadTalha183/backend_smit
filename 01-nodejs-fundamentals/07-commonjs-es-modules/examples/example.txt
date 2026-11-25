@@ -1,0 +1,37 @@
+Node.js version: v24.22.1
+
+Run: node examples/demo-cjs.cjs
+
+--- PART 1: require() a CommonJS module ---
+cjsMath.add(5, 3): 8
+cjsMath.PI: 3.14159
+--- PART 2: require() an ES Module (Node 22.12+) ---
+esmMath.add(5, 3): 8
+esmMath.PI: 3.14159
+esmMath.default.name: esm-math
+--- PART 3: dynamic import() of an ES Module ---
+esm.add(10, 4): 14
+esm.count (before): 0
+esm.increment(): 1
+esm.count (after): 1
+
+Run: node examples/demo-esm.mjs
+
+--- PART 1: import an ES Module (named + default) ---
+esmAdd(5, 3): 8
+esmSubtract(5, 3): 2
+PI: 3.14159
+default export name: esm-math
+--- PART 2: import a CommonJS module ---
+cjsMath.add(5, 3): 8
+cjsAdd(5, 3) — named import from CJS: 8
+--- PART 3: live bindings (ESM) vs copies (CJS) ---
+count (before): 0
+count (after two increments): 2
+--- PART 4: __dirname in ESM ---
+__filename ends with demo-esm.mjs: true
+__dirname ends with examples: true
+--- PART 5: require() inside ESM, via createRequire ---
+createRequire + require CJS add: 5
+--- PART 6: top-level await (ESM only) ---
+top-level await import, lazy.add(1, 2): 3

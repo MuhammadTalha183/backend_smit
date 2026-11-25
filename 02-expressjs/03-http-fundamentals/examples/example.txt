@@ -1,0 +1,6 @@
+GET / -> 200 Hello, HTTP!
+POST /echo -> 201 {"message":"hello","count":3}
+GET /users/42 -> 200 {"id":"42"}
+GET /search?q=express -> 200 {"q":"express"}
+GET /not-found-demo -> 404 {"error":"Not found"}
+GET /headers -> 200 {"clientName":"talha"} (X-Custom-Header: http-fundamentals)

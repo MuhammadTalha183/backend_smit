@@ -1,0 +1,13 @@
+Node.js version: v24.22.1
+Express version: 5.3.0 (from /tmp/express-verify/node_modules — not installed in this repo)
+
+Run: NODE_PATH=/tmp/express-verify/node_modules node examples/hello-express.js
+
+Server listening on port 35763
+GET / -> Hello from Express!
+GET /hello/Talha -> Hello, Talha!
+GET /json -> {"message":"Hello from Express!","framework":"Express","version":5}
+Server closed.
+
+Note: the port number is picked by the operating system (port 0 = ephemeral),
+so it will be different on every run. Everything else should match exactly.

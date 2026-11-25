@@ -4,7 +4,7 @@
 > **Topic:** 05 — Global Objects
 > **Priority:** 🟢 Normal
 > **Previous topic:** [04 — Event Loop](../04-event-loop/README.md)
-> **Next topic:** 06 — Modules and Module Systems *(coming next — folder not created yet)*
+> **Next topic:** [06 — Modules and Module Systems](../06-modules/README.md)
 >
 > **One-line summary:** Global objects are the tools Node.js gives you for free in every file — `console`, `process`, `Buffer`, the timers, `__dirname` — no `require` needed. Know which ones exist, which ones only *look* global, and you stop re-inventing them (and stop being surprised by them).
 >
@@ -885,7 +885,7 @@ Practice answering these out loud, in your own words first — then check yourse
 - MDN — `globalThis`: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis
 - MDN — `TextEncoder` / `TextDecoder`: https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder
 - Previous topic in this module: [04 — Event Loop](../04-event-loop/README.md) — timers, microtasks, and `process.nextTick` in full.
-- Next topic in this module: 06 — Modules and Module Systems *(coming next — folder not created yet)*.
+- Next topic in this module: [06 — Modules and Module Systems](../06-modules/README.md).
 - Root README of this repository: [Root README](../../README.md).
 
 ---

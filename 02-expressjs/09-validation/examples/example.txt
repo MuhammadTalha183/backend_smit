@@ -1,0 +1,7 @@
+POST /users (valid)       -> 201 {"id":2,"name":"Ayesha","email":"ayesha@example.com","age":21}
+POST /users (no name)     -> 400 {"errors":[{"field":"name","message":"name is required and must be at least 2 characters"}]}
+POST /users (bad email)   -> 400 {"errors":[{"field":"email","message":"email must be a valid email address"}]}
+POST /users (age 200)     -> 400 {"errors":[{"field":"age","message":"age must be a whole number between 13 and 120"}]}
+GET  /users/abc           -> 400 {"errors":[{"field":"id","message":"id must be a number"}]}
+GET  /users?page=abc      -> 400 {"errors":[{"field":"page","message":"page must be a positive number"}]}
+GET  /users?limit=500     -> 400 {"errors":[{"field":"limit","message":"limit must be a number between 1 and 100"}]}

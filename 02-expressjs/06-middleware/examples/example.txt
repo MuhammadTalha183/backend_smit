@@ -1,0 +1,26 @@
+[server] listening on port 45081
+[logger] GET /
+GET  / -> 200 Hello from Express 5!
+[logger] GET /early
+GET  /early -> 200 early route — the late middleware never ran for me
+[logger] GET /late
+[late] I run only for routes registered after me
+GET  /late -> 200 late route — the late middleware ran for me
+[logger] GET /hello.txt
+GET  /hello.txt (static) -> 200 Hello from a static file!
+This file is served by express.static — no route handler needed.
+
+[logger] GET /protected
+[auth] Missing or wrong API key, sending 401
+GET  /protected (no key) -> 401 {"error":"Unauthorized: valid x-api-key header required"}
+[logger] GET /protected
+[auth] API key OK, calling next()
+GET  /protected (key) -> 200 {"message":"Welcome, authenticated user!"}
+[logger] POST /echo
+POST /echo (JSON body) -> 200 {"youSent":{"name":"Talha","role":"student"}}
+[logger] POST /form
+POST /form (urlencoded body) -> 200 {"formData":{"name":"Talha","course":"backend"}}
+[logger] GET /boom
+[error] Boom! Something went wrong.
+GET  /boom (error route) -> 500 {"error":"Boom! Something went wrong."}
+[server] closed, exiting

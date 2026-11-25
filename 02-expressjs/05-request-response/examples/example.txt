@@ -1,0 +1,19 @@
+Server listening on port 46547
+GET /users/42 -> 200 { id: '42', name: 'User 42' }
+GET /search?q=express&limit=2 -> 200 {
+  q: 'express',
+  limit: '2',
+  results: [ 'Result 1 for "express"', 'Result 2 for "express"' ]
+}
+POST /echo -> 201 { received: { hello: 'world' } }
+GET /headers -> 200 { userAgent: 'request-response-demo/1.0' }
+GET /old -> 302 Location: /new
+GET /new -> 200 You reached the new page
+GET /locals -> 200 {
+  appName: 'Request & Response Demo',
+  requestTime: '2026-11-25T10:02:28.812Z'
+}
+GET /data (Accept: application/json) -> 200 { message: 'Hello from the JSON version' }
+GET /data (Accept: text/plain) -> 200 Hello from the plain-text version
+GET /data (Accept: text/html) -> 406 Not Acceptable: this route serves JSON or plain text only
+Server closed

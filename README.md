@@ -72,19 +72,17 @@ Our roadmap starts directly with Node.js because Core JavaScript has already bee
 
 ### Phase 02 — Express.js
 
-- Introduction to Express.js.
-- Creating an Express Server.
-- Routing.
-- Request and Response Objects.
-- Route Parameters and Query Parameters.
-- Request Body Handling.
-- Middleware.
-- Built-in Middleware.
-- Custom Middleware.
-- Error Handling Middleware.
-- RESTful API Development.
-- HTTP Methods and Status Codes.
-- API Structure and Best Practices.
+- 01 Introduction to Express.js.
+- 02 Project Setup.
+- 03 HTTP Fundamentals.
+- 04 Routing.
+- 05 Request and Response Objects.
+- 06 Middleware.
+- 07 Controllers.
+- 08 Error Handling.
+- 09 Validation.
+- 10 REST APIs.
+- 11 Configuration.
 
 ### Phase 03 — Database Management
 
@@ -183,24 +181,105 @@ backend-development-journey/
 ├── README.md
 │
 ├── 01-nodejs-fundamentals/
-│   ├── README.md
-│   ├── introduction/
-│   ├── architecture/
-│   ├── modules/
-│   ├── npm/
-│   ├── file-system/
-│   ├── events/
-│   ├── streams-and-buffers/
-│   └── http-module/
+│   ├── README.md                # Module 01 overview
+│   ├── resources.md
+│   ├── diagrams/
+│   ├── 01-introduction-to-nodejs/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 02-nodejs-architecture/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 03-v8-javascript-engine/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 04-event-loop/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 05-global-objects/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 06-modules/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 07-commonjs-es-modules/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   └── 08-npm/  # created as we reach it
 │
 ├── 02-expressjs/
-│   ├── README.md
-│   ├── server-setup/
-│   ├── routing/
-│   ├── request-response/
-│   ├── middleware/
-│   ├── error-handling/
-│   └── rest-apis/
+│   ├── README.md                # Module 02 overview
+│   ├── resources.md
+│   ├── diagrams/
+│   ├── 01-introduction/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 02-project-setup/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 03-http-fundamentals/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 04-routing/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 05-request-response/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 06-middleware/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 07-controllers/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 08-error-handling/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 09-validation/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 10-rest-apis/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   └── 11-configuration/
+│       ├── README.md
+│       ├── notes.md
+│       ├── examples/
+│       └── exercises.md
 │
 ├── 03-databases/
 │   ├── README.md

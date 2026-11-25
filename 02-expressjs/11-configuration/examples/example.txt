@@ -1,0 +1,10 @@
+[INFO] Resolved configuration:
+[INFO]   env        = development
+[INFO]   port       = 3000 (default 3000)
+[INFO]   host       = 127.0.0.1
+[INFO]   logLevel   = info
+[INFO]   databaseUrl= postgres://localhost:5432/devdb
+[INFO]   jwtSecret  = (not set)
+[INFO]   isProduction= false
+GET /health -> 200 {"status":"ok","env":"development","version":"1.0.0"}
+GET /config -> 200 {"env":"development","port":3000,"host":"127.0.0.1","logLevel":"info"}

@@ -80,8 +80,8 @@ By the end of this module, you will be able to:
 | 03 | V8 JavaScript Engine | 🔴 High | ✅ Notes, examples, exercises done | [03-v8-javascript-engine/](./03-v8-javascript-engine/) |
 | 04 | Event Loop | 🔴🔴 Very High | ✅ Notes, examples, exercises done | [04-event-loop/](./04-event-loop/) |
 | 05 | Global Objects | 🟢 Normal | ✅ Notes, examples, exercises done | [05-global-objects/](./05-global-objects/) |
-| 06 | Modules and Module Systems | — | ⬜ Coming next | `06-modules/` *(not created yet)* |
-| 07 | CommonJS and ES Modules | — | ⬜ Later | `07-commonjs-es-modules/` *(not created yet)* |
+| 06 | Modules and Module Systems | 🔴 High | ✅ Notes, examples, exercises done | [06-modules/](./06-modules/) |
+| 07 | CommonJS and ES Modules | 🔴 High | ✅ Notes, examples, exercises done | [07-commonjs-es-modules/](./07-commonjs-es-modules/) |
 | 08 | NPM and Package Management | — | ⬜ Later | `08-npm/` *(not created yet)* |
 | 09 | File System Module | — | ⬜ Later | `09-file-system/` *(not created yet)* |
 | 10 | Path Module | — | ⬜ Later | `10-path-module/` *(not created yet)* |
@@ -109,9 +109,11 @@ By the end of this module, you will be able to:
         ↓  six phases, microtasks, timers, setImmediate, blocking the loop
 05 Global Objects
         ↓  global / globalThis, process, console, Buffer, timers
-06 Modules and Module Systems          ← next
+06 Modules and Module Systems
+        ↓  one file one job, require, module.exports, caching, wrapper
 07 CommonJS and ES Modules
-08 NPM and Package Management
+        ↓  require vs import, live bindings, interop, "type", dual packages
+08 NPM and Package Management          ← next
 09 File System Module
 10 Path Module
 11 HTTP Module
@@ -143,7 +145,9 @@ Every topic folder follows the same structure, so any developer can follow it wi
 │   ├── v8-and-libuv.md
 │   ├── event-loop-workflow.md
 │   ├── thread-pool-workflow.md
-│   └── async-file-operation.md
+│   ├── async-file-operation.md
+│   ├── modules-and-require.md
+│   └── commonjs-vs-esm.md
 │
 ├── 01-introduction-to-nodejs/
 │   ├── README.md              # Short lesson overview — start here
@@ -177,11 +181,34 @@ Every topic folder follows the same structure, so any developer can follow it wi
 │   │   └── example.txt
 │   └── exercises.md
 │
-└── 05-global-objects/
+├── 05-global-objects/
+│   ├── README.md
+│   ├── notes.md
+│   ├── examples/
+│   │   ├── global-objects.js
+│   │   └── example.txt
+│   └── exercises.md
+│
+└── 06-modules/
     ├── README.md
     ├── notes.md
     ├── examples/
-    │   ├── global-objects.js
+    │   ├── modules.js
+    │   ├── greet.js
+    │   ├── math-utils.js
+    │   ├── counter.js
+    │   ├── config.json
+    │   └── example.txt
+    └── exercises.md
+
+└── 07-commonjs-es-modules/
+    ├── README.md
+    ├── notes.md
+    ├── examples/
+    │   ├── cjs-math.cjs
+    │   ├── esm-math.mjs
+    │   ├── demo-cjs.cjs
+    │   ├── demo-esm.mjs
     │   └── example.txt
     └── exercises.md
 ```
@@ -237,6 +264,8 @@ The diagrams live in [`diagrams/`](./diagrams/) — each file has a Mermaid diag
 | Event Loop Workflow | The six phases of the loop, in order | [event-loop-workflow.md](./diagrams/event-loop-workflow.md) |
 | Thread Pool Workflow | The 4 worker threads, the queue, and what uses them | [thread-pool-workflow.md](./diagrams/thread-pool-workflow.md) |
 | Asynchronous File Operation | One `fs.readFile` call, from your code to the OS and back | [async-file-operation.md](./diagrams/async-file-operation.md) |
+| Modules and require() | How `require()` resolves, caches, and wraps a file | [modules-and-require.md](./diagrams/modules-and-require.md) |
+| CommonJS vs ES Modules | How Node.js decides which system a file is | [commonjs-vs-esm.md](./diagrams/commonjs-vs-esm.md) |
 
 The same diagrams also appear inside the relevant `notes.md` files, next to the text that explains them.
 
@@ -296,10 +325,28 @@ Tick a box only after **you** have done that step — not when the notes were ge
 - [ ] Interview questions included.
 - [ ] Documentation reviewed.
 
-### 06–16 — Coming next
+### 06 — Modules and Module Systems
 
-- [ ] 06 — Modules and Module Systems
-- [ ] 07 — CommonJS and ES Modules
+- [ ] Lesson explained.
+- [ ] Technical notes prepared.
+- [ ] Important diagrams included.
+- [ ] Practical examples documented (ran `examples/modules.js`).
+- [ ] Exercises prepared.
+- [ ] Interview questions included.
+- [ ] Documentation reviewed.
+
+### 07 — CommonJS and ES Modules
+
+- [ ] Lesson explained.
+- [ ] Technical notes prepared.
+- [ ] Important diagrams included.
+- [ ] Practical examples documented (ran `examples/demo-cjs.cjs` and `examples/demo-esm.mjs`).
+- [ ] Exercises prepared.
+- [ ] Interview questions included.
+- [ ] Documentation reviewed.
+
+### 08–16 — Coming next
+
 - [ ] 08 — NPM and Package Management
 - [ ] 09 — File System Module
 - [ ] 10 — Path Module

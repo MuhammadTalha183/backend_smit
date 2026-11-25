@@ -2,7 +2,7 @@
 
 > **Priority:** 🟢 Normal
 > **Previous topic:** [04 — Event Loop](../04-event-loop/README.md)
-> **Next topic:** 06 — Modules and Module Systems *(coming next — folder not created yet)*
+> **Next topic:** [06 — Modules and Module Systems](../06-modules/README.md)
 
 Global objects are the tools Node.js gives you for free in every file — `console`, `process`, `Buffer`, and the timers — with no `require` needed. This lesson teaches you which ones exist, which names only *look* global (`__dirname`, `__filename`, `require`), and why characters are not bytes.
 
@@ -55,4 +55,4 @@ node examples/global-objects.js
 
 ---
 
-[← Main README](../../README.md) · Previous: [04 — Event Loop](../04-event-loop/README.md) · Next: 06 — Modules and Module Systems (coming next)
+[← Main README](../../README.md) · Previous: [04 — Event Loop](../04-event-loop/README.md) · Next: [06 — Modules and Module Systems](../06-modules/README.md)
