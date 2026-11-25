@@ -1,0 +1,17 @@
+before index — winning plan: COLLSCAN
+before index — docs examined: 4
+indexes created: [
+  '_id_',
+  'city_1',
+  'city_1_age_-1',
+  'email_1',
+  'bio_text',
+  'createdAt_1'
+]
+after index — winning plan: FETCH -> IXSCAN
+after index — index used: city_1
+after index — docs examined: 2
+compound query — docs examined: 2
+text search "developer": [ 'Ayesha', 'Talha' ]
+duplicate email rejected: code 11000
+DONE

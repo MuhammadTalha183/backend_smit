@@ -1,0 +1,19 @@
+Relational-style ($lookup join):
+[
+  {
+    name: 'Talha',
+    posts: [ { title: 'Hello MongoDB' }, { title: 'SQL vs NoSQL' } ]
+  }
+]
+Document-style (embedded, one read):
+{
+  name: 'Talha',
+  course: 'CS',
+  posts: [ { title: 'Hello MongoDB' }, { title: 'SQL vs NoSQL' } ]
+}
+Flexible schema — two users, different fields, same collection:
+[
+  { name: 'Talha', course: 'CS' },
+  { name: 'Ayesha', course: 'CS', hostel: true }
+]
+Disconnected

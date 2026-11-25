@@ -1,0 +1,15 @@
+connected: ok
+inserted: 000000000000000000000001
+count after insert: 1
+inserted: 000000000000000000000002
+inserted: 000000000000000000000003
+count after insert: 3
+all users (sorted by name): [ 'Ayesha', 'Bilal', 'Talha' ]
+update — matched: 1 modified: 1
+updated user: {"_id":"000000000000000000000003","name":"Bilal","email":"bilal@example.com","city":"Karachi","age":20}
+count after update: 3
+delete — deleted: 1
+count after delete: 2
+remaining users: [ 'Bilal', 'Talha' ]
+failed connection error code: ECONNREFUSED
+DONE

@@ -84,23 +84,22 @@ Our roadmap starts directly with Node.js because Core JavaScript has already bee
 - 10 REST APIs.
 - 11 Configuration.
 
-### Phase 03 — Database Management
+### Phase 03 — MongoDB
 
-- Introduction to Databases.
-- Relational Database Concepts.
-- SQL Fundamentals.
-- PostgreSQL Setup.
-- Database and Table Creation.
-- CRUD Operations.
-- Primary and Foreign Keys.
-- Relationships.
-- Joins.
-- Constraints.
-- Indexes.
-- Database Integration with Node.js.
-- PostgreSQL Connection Pooling.
-- Transactions.
-- Database Design and Optimization.
+- 01 Introduction to MongoDB.
+- 02 SQL vs NoSQL.
+- 03 MongoDB Architecture.
+- 04 Installation and Setup.
+- 05 Databases, Collections and Documents.
+- 06 CRUD Operations.
+- 07 Query Operators.
+- 08 Schema Design.
+- 09 Relationships.
+- 10 Indexing.
+- 11 Aggregation.
+- 12 Node.js Integration.
+- 13 Mongoose.
+- 14 Practical Project.
 
 ### Phase 04 — Authentication and Authorization
 
@@ -281,13 +280,80 @@ backend-development-journey/
 │       ├── examples/
 │       └── exercises.md
 │
-├── 03-databases/
-│   ├── README.md
-│   ├── sql-fundamentals/
-│   ├── postgresql/
-│   ├── relationships/
-│   ├── queries/
-│   └── node-postgresql-integration/
+├── 03-mongodb/
+│   ├── README.md                # Module 03 overview
+│   ├── resources.md
+│   ├── diagrams/
+│   ├── 01-introduction/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 02-sql-vs-nosql/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 03-mongodb-architecture/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 04-installation-setup/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 05-databases-collections-documents/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 06-crud-operations/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 07-query-operators/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 08-schema-design/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 09-relationships/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 10-indexing/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 11-aggregation/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 12-nodejs-integration/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   ├── 13-mongoose/
+│   │   ├── README.md
+│   │   ├── notes.md
+│   │   ├── examples/
+│   │   └── exercises.md
+│   └── 14-practical-project/
+│       ├── README.md
+│       ├── notes.md
+│       ├── examples/
+│       └── exercises.md
 │
 ├── 04-authentication-authorization/
 │   ├── README.md

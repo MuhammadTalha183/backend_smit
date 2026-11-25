@@ -1,0 +1,6 @@
+Created user: talha ahmed talha@example.com student
+ValidationError: User validation failed: email: Path `email` is required., age: Path `age` (-5) is less than minimum allowed value (0).
+Post: Hello Mongoose by talha ahmed
+Post: Mongoose Population by talha ahmed
+Virtual displayName: talha ahmed (student)
+DONE

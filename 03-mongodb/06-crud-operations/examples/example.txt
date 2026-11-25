@@ -1,0 +1,19 @@
+insertOne acknowledged: true | insertedId: 000000000000000000000001
+insertMany insertedCount: 3
+All books, cheapest first:
+  You Don't Know JS - $25 (stock 0)
+  Eloquent JavaScript - $30 (stock 3)
+  Clean Code - $40 (stock 5)
+  Design Patterns - $55 (stock 2)
+Cheapest in stock: Eloquent JavaScript
+In stock (title + stock only): [{"title":"Clean Code","stock":5},{"title":"Eloquent JavaScript","stock":3},{"title":"Design Patterns","stock":2}]
+Total books: 4
+Out-of-stock books: 1
+updateOne matched: 1 | modified: 1
+updateMany matched: 2 | modified: 2
+replaceOne matched: 1 | modified: 1
+upsert matched: 0 | modified: 0 | upsertedId: 000000000000000000000005
+deleteOne deletedCount: 1
+deleteMany deletedCount: 0
+Remaining books: [{"title":"Clean Code","price":40,"stock":5},{"title":"Design Patterns","price":60,"stock":2},{"price":45,"stock":1,"title":"Refactoring"},{"title":"You Don't Know JS","price":30,"stock":4}]
+Client closed, server stopped.

@@ -1,0 +1,5 @@
+one-to-one (embedded profile): {"bio":"CS student","city":"Karachi"}
+one-to-many (books by Talha): [ 'Node.js Guide', 'Express in Practice' ]
+many-to-many (Talha courses): [ 'Node.js', 'React' ]
+$lookup orders with buyer name: [{"total":2500,"buyerName":"Talha"},{"total":1800,"buyerName":"Ayesha"}]
+DONE

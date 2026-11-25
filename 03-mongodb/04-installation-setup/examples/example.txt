@@ -1,0 +1,11 @@
+Local connection string pattern:
+  mongodb://localhost:27017/schooldb
+Atlas connection string pattern:
+  mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/schooldb
+URI this demo reads from the environment (MONGODB_URI):
+  mongodb://localhost:27017/schooldb
+Connected to MongoDB.
+Ping result: {"ok":1}
+Server version: 8.2.6
+Databases on a fresh server: admin, config, local
+Client closed, server stopped.

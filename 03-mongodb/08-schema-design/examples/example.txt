@@ -1,0 +1,6 @@
+embedded post: {"_id":"000000000000000000000001","title":"Why MongoDB?","author":"Talha","comments":[{"_id":"000000000000000000000101","text":"Great post!","by":"Ayesha"},{"_id":"000000000000000000000102","text":"Very helpful.","by":"Bilal"}]}
+referenced order: {"total":2500,"buyer":"Ayesha"}
+valid product inserted: ok
+invalid product rejected: code 121 | price must be >= 0
+products count: 1
+DONE

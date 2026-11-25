@@ -1,0 +1,9 @@
+GET /tasks -> 200 [{"_id":"000000000000000000000001","title":"Learn MongoDB basics","done":false,"priority":"high"},{"_id":"000000000000000000000002","title":"Build the tasks API","done":false,"priority":"medium"},{"_id":"000000000000000000000003","title":"Write notes for the capstone","done":true,"priority":"low"}]
+POST /tasks -> 201 {"_id":"000000000000000000000004","title":"Review the capstone notes","done":false,"priority":"medium"}
+POST /tasks -> 400 {"error":"Validation failed.","errors":{"title":"Title is required and must be a non-empty string."}}
+GET /tasks/000000000000000000000004 -> 200 {"_id":"000000000000000000000004","title":"Review the capstone notes","done":false,"priority":"medium"}
+PATCH /tasks/000000000000000000000004 -> 200 {"_id":"000000000000000000000004","title":"Review the capstone notes","done":true,"priority":"medium"}
+GET /tasks/not-an-id -> 400 {"error":"Invalid task id: must be a 24-character hex string."}
+GET /tasks/000000000000000000000099 -> 404 {"error":"Task not found."}
+DELETE /tasks/000000000000000000000004 -> 200 {"deleted":true}
+GET /tasks -> 200 [{"_id":"000000000000000000000001","title":"Learn MongoDB basics","done":false,"priority":"high"},{"_id":"000000000000000000000002","title":"Build the tasks API","done":false,"priority":"medium"},{"_id":"000000000000000000000003","title":"Write notes for the capstone","done":true,"priority":"low"}]

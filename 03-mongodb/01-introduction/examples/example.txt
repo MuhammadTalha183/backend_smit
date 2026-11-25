@@ -1,0 +1,27 @@
+Connected to MongoDB
+Inserted 2 students
+All students:
+[
+  {
+    _id: new ObjectId('000000000000000000000001'),
+    name: 'Talha',
+    course: 'CS',
+    semester: 5
+  },
+  {
+    _id: new ObjectId('000000000000000000000002'),
+    name: 'Ayesha',
+    course: 'CS',
+    semester: 5
+  }
+]
+One student (name = Talha):
+{
+  _id: new ObjectId('000000000000000000000001'),
+  name: 'Talha',
+  course: 'CS',
+  semester: 5
+}
+Count: 2
+Collections in "learn": [ 'students' ]
+Disconnected

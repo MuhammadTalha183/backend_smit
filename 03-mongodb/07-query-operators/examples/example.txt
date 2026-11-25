@@ -1,0 +1,19 @@
+age > 21: [ 'Ayesha', 'Sara', 'Omar' ]
+city in [Karachi, Lahore]: [ 'Talha', 'Ayesha', 'Bilal', 'Omar' ]
+active AND Karachi: [ 'Talha' ]
+age < 20 OR age > 28: [ 'Bilal', 'Sara' ]
+no active field: [ 'Omar' ]
+skill mongodb: [ 'Talha', 'Sara' ]
+skills node AND react: [ 'Ayesha', 'Omar' ]
+name starts with A: [ 'Ayesha' ]
+projection name+city: [
+  { name: 'Talha', city: 'Karachi' },
+  { name: 'Ayesha', city: 'Lahore' },
+  { name: 'Bilal', city: 'Karachi' },
+  { name: 'Sara', city: 'Islamabad' },
+  { name: 'Omar', city: 'Karachi' }
+]
+sorted desc, skip 1, limit 2: [ 'Ayesha', 'Omar' ]
+active count: 3
+orders with an item laptop qty >= 3: [ '000000000000000000000012' ]
+DONE

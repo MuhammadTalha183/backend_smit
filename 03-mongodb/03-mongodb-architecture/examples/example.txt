@@ -1,0 +1,14 @@
+Ping: { ok: 1 }
+Server version: 8.2.6
+Storage engine: wiredTiger
+Namespace: architecture.users
+Database: architecture
+Collections: 1 | Documents: 1
+BSON types round-trip:
+  date is a Date: true | 2026-11-25T10:00:00.000Z
+  decimal stays exact: 19.99
+  int64 beyond float range: 9007199254740993
+  int32: 42
+  binary bytes: de ad be ef
+  nested: {"city":"Karachi","tags":["node","mongo"]}
+Disconnected

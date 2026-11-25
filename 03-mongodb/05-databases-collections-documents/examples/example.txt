@@ -1,0 +1,14 @@
+Database: school
+Collection: students
+Inserted documents: 2
+Talha _id: 000000000000000000000001
+Ayesha _id: 000000000000000000000002
+ObjectId is 24 hex characters: true
+Documents in students:
+  {"_id":"000000000000000000000001","name":"Talha","age":21,"enrolled":true,"courses":["CS-301","CS-302"],"address":{"city":"Karachi","area":"Gulshan"},"admittedOn":"2026-01-15T00:00:00.000Z","guardianPhone":null}
+  {"_id":"000000000000000000000002","name":"Ayesha","age":20,"enrolled":true,"courses":["CS-301"],"address":{"city":"Lahore","area":"Model Town"},"admittedOn":"2026-01-15T00:00:00.000Z","guardianPhone":null}
+Collections before drop: students
+Created collection: temp-notes
+Collections after drop: students
+Student count: 2
+Client closed, server stopped.

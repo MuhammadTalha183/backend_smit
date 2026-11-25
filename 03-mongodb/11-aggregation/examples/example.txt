@@ -1,0 +1,22 @@
+1. Revenue per category (delivered orders):
+{"_id":"electronics","totalRevenue":85000,"orderCount":3}
+{"_id":"clothing","totalRevenue":3500,"orderCount":1}
+{"_id":"books","totalRevenue":2700,"orderCount":2}
+2. Average order value per customer:
+{"_id":"000000000000000000000001","orderCount":3,"averageOrderValue":15900}
+{"_id":"000000000000000000000002","orderCount":3,"averageOrderValue":7433.33}
+{"_id":"000000000000000000000003","orderCount":2,"averageOrderValue":12400}
+3. Orders with customer name ($lookup + $unwind):
+{"category":"electronics","amount":45000,"status":"delivered","customerName":"Ali"}
+{"category":"electronics","amount":22000,"status":"delivered","customerName":"Bilal"}
+{"category":"electronics","amount":18000,"status":"delivered","customerName":"Ayesha"}
+{"category":"clothing","amount":3500,"status":"delivered","customerName":"Ayesha"}
+{"category":"clothing","amount":2800,"status":"cancelled","customerName":"Bilal"}
+{"category":"books","amount":1500,"status":"delivered","customerName":"Ali"}
+{"category":"books","amount":1200,"status":"delivered","customerName":"Ali"}
+{"category":"books","amount":800,"status":"pending","customerName":"Ayesha"}
+4. First 3 orders with discounted total ($addFields):
+{"category":"books","amount":1200,"discountedTotal":1080}
+{"category":"electronics","amount":45000,"discountedTotal":40500}
+{"category":"clothing","amount":3500,"discountedTotal":3150}
+DONE
